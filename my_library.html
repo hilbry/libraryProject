@@ -32,7 +32,7 @@
     <div class='container'>
       <div class='row'>
         <div class='col-lg-10'>
-           <button class="btn btn-outline-success my-2 my-sm-0 offset-7" type="submit">+ Add a Book </button>
+           <button class="btn btn-outline-success my-2 my-sm-0 offset-7" type="button" data-toggle="modal" data-target="#exampleModal">+ Add a Book </button>
         </div>
       </div>
     </div>
@@ -42,19 +42,84 @@
   </div>
 </nav> 
 
+<!-- the H1 tag -->
+
+<h1 id="libraryBooks" >There are 0 books in the library</h1>
+
+<!-- Modal -->
+
+<!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Launch demo modal
+</button> -->
+
+<!-- Modal -->
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+       <!-- the form -->
+
+       <form>
+		   <div class="form-group">
+		     <label for="recipient-name" class="col-form-label">Book Title</label>
+		     <input type="text" class="form-control" id="Title">
+		   </div>
+		   <div class="form-group">
+		     <label for="message-text" class="col-form-label">Author</label>
+		     <input type="text" class="form-control" id="Author">
+		            
+		     <div class="form-group">
+		       <label for="recipient-name" class="col-form-label">Pages</label>
+		       <input type="text" class="form-control" id="Pages">
+		     </div>
+
+		     <div class="form-group">
+		       <label for="recipient-name" class="col-form-label">Published Date</label>
+		       <input type="text" class="form-control" id="Published">
+		     </div>
+		    </div>
+   		</form>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+<!--         <button type="button" class="btn btn-primary">Save changes</button> -->
+        <button onclick="storeBook()" class="btn btn-outline-success my-2 my-sm-0 offset-7" type="submit">+ Add a Book </button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class='container-fluid'>
  <div class='row'>
   <div class='col-lg-4'>
-   <div class="list-group">
-	  <a href="#" class="list-group-item list-group-item-action active">book 0</a>
-	  <a href="#" class="list-group-item list-group-item-action">book 1</a>
-	  <a href="#" class="list-group-item list-group-item-action">book 2</a>
-	  <a href="#" class="list-group-item list-group-item-action">book 3</a>
-	  <a href="#" class="list-group-item list-group-item-action disabled">book 4</a>
+   <div class="list-group" id="yomama">
+   		<!-- your book will go here -->
    </div>
   </div>
  </div>
 </div>
+
+
+
+<!-- bootstrap JQ && JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script type="text/javascript" src="script.js"></script>>
+
+
+
+</body>
 
 
 
