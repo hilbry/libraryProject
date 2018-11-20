@@ -12,6 +12,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
 
 	<title>My_library</title>
 </head>
@@ -22,58 +23,54 @@
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="#">HR Library</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+  <span class="navbar-toggler-icon"> </span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-	<ul class="navbar-nav mr-auto">
-
-    </ul>
+   <ul class="navbar-nav mr-auto"> </ul>
     <div class='container'>
       <div class='row'>
         <div class='col-lg-10'>
-           <button class="btn btn-outline-success my-2 my-sm-0 offset-7" type="button" data-toggle="modal" data-target="#exampleModal">+ Add a Book </button>
+          <button class="btn btn-outline-success my-2 my-sm-0 offset-7" type="button" data-toggle="modal" data-target="#exampleModal"> + Add a Book </button>
         </div>
       </div>
     </div>
     <form class="form-inline my-2 my-lg-0">
-       <input class="form-control mr-sm-2 mr-auto" type="search" placeholder="Search" aria-label="Search">
+       <input class="form-control mr-sm-2 mr-auto" onChange="searchMeme()" type="search" placeholder="Search" aria-label="Search">
     </form>
   </div>
 </nav> 
 
-<!-- the H1 tag -->
+<!-- the H1 tag for book numbers -->
 
-<h1 id="libraryBooks" >There are 0 books in the library</h1>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+      <h1 id="libraryBooks">There are 0 books in the library</h1>
+    </div>
+  </div>
+</div>
 
-<!-- Modal -->
-
-<!-- Button trigger modal -->
-<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-  Launch demo modal
-</button> -->
-
-<!-- Modal -->
-
+<!-- modal structure -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
+          <span aria-hidden="true"> &times; </span>
         </button>
       </div>
       <div class="modal-body">
 
-       <!-- the form -->
+      <!-- the form -->
 
-       <form>
+      <form>
 		   <div class="form-group">
 		     <label for="recipient-name" class="col-form-label">Book Title</label>
 		     <input type="text" class="form-control" id="Title">
 		   </div>
-		   <div class="form-group">
+		    <div class="form-group">
 		     <label for="message-text" class="col-form-label">Author</label>
 		     <input type="text" class="form-control" id="Author">
 		            
@@ -90,10 +87,21 @@
    		</form>
 
       </div>
+
+
+
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-<!--         <button type="button" class="btn btn-primary">Save changes</button> -->
-        <button onclick="storeBook()" class="btn btn-outline-success my-2 my-sm-0 offset-7" type="submit">+ Add a Book </button>
+
+<!-- <button type="button" class="btn btn-primary"> Save changes </button> -->
+
+        <button onclick="storeBook()" class="btn btn-outline-success my-2 my-sm-0 offset-7" type="submit"> + Add a Book
+        </button>
+
+        <button type="submit" class="btn btn-danger">
+        DELETE
+        <i class="glyphicon glyphicon-remove-sign"></i>
+        </button>
       </div>
     </div>
   </div>
@@ -101,15 +109,45 @@
 
 <div class='container-fluid'>
  <div class='row'>
-  <div class='col-lg-4'>
+  <div class='col-3'>
    <div class="list-group" id="yomama">
-   		<!-- your book will go here -->
+    <!-- your book come here -->
+<!--     This is where the books should be displayed after search -->
+
    </div>
   </div>
  </div>
 </div>
 
+<!-- account register -->
 
+<!-- <div class="container">
+  <div class="row">
+   <div class="col-10">
+   <h2 id="Register">Register</h2>
+    <form>
+
+      <div class="form-group">
+       <label for="email">Email:</label>
+       <input type="email" class="form-control" id="email" placeholder="Enter email">
+      </div>
+
+      <div class="form-group">
+       <label for="pwd" id="">Password:</label>
+       <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+      </div>
+
+      <div class="checkbox">
+       <label><input type="checkbox"> Remember me</label>
+      </div>
+
+      <button type="submit" class="btn btn-default">Submit</button>
+
+    </form>
+
+   </div>
+  </div>
+</div> -->
 
 <!-- bootstrap JQ && JS -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -120,6 +158,11 @@
 
 
 </body>
+
+
+<!-- <footer class="container-fluid text-center">
+  <p> Contact Me!</p>
+</footer> -->
 
 
 
