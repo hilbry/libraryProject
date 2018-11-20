@@ -1,14 +1,25 @@
 body {
-	background:url(diagonal-squares.png);
+	/*background:url(diagonal-squares.png);*/
+	background: #d0cbcb;
 }
-#navbar-expand-lgnavbarnavbar-darkbg-dark{
+/*#navbar-expand-lgnavbarnavbar-darkbg-dark{
 	
 }
-
+*/
 #libraryBooks{
 	text-align: center;
-	color:#FFFFFF;
+	/*color:#FFFFFF;*/
+	font-family: 'Gentium Book Basic', serif;
+	letter-spacing: 3px;
+	/*background: #d0cbcb;*/
 }
 li{
 	list-style-type: none;
 }
+img{
+	height:100px;
+	width:100px;
+}
+/*#yomama{
+	background: #d0cbcb;
+}*/
